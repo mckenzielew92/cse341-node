@@ -7,8 +7,17 @@ const person = {
     }
 };
 
-const copiedPerson = {...person};
-console.log(copiedPerson);
+const printName = ({ name }) => {
+    console.log(name);
+}
+
+printName(person);
+
+const { name, age } = person;
+console.log(name, age);
+
+// const copiedPerson = {...person};
+// console.log(copiedPerson);
 
 //person.greet();
 
@@ -22,30 +31,38 @@ const hobbies = ['Sports', 'Cooking'];
     //console.log(hobbies.map(hobby => ' Hobby: ' + hobby));
     //console.log(hobbies);
 
+    //to destructure the array:
+    const [hobby1, hobby2] = hobbies;
+    console.log(hobby1, hobby2); //this doesn't lot an array but the elements in the array referenced.
     //******************Arrays, Objects and Reference Types 
     //- objects and arrays are reference types, the reference can be changed with a constant. (objects and arrays)
 
     //push adds to existing array - not creating a new array
-hobbies.push('Programming');
-console.log(hobbies);
+// hobbies.push('Programming');
+// console.log(hobbies);
 
-//********************** Rest and Spread Operators */
-//const copiedArray = hobbies.slice(); //slice copies and array while eliminating the last 
-//but when we console log we see it is an array with an array inside it.
-const copiedArray = [...hobbies]; // three dots (spread operator) takes all the properties 
-//of the array or object and pulled out and added to the new array.
-console.log(copiedArray);
+// //********************** Rest and Spread Operators */
+// //const copiedArray = hobbies.slice(); //slice copies and array while eliminating the last 
+// //but when we console log we see it is an array with an array inside it.
+// const copiedArray = [...hobbies]; // three dots (spread operator) takes all the properties 
+// //of the array or object and pulled out and added to the new array.
+// console.log(copiedArray);
 
 //const toArray = (arg1, arg2, arg3) => {
 //    return [arg1, arg2, arg3];
 //}
 //console.log(toArray(1, 2, 3));
 //the above is not flexible if you want to add to the arguments.
-const toArray = (...args) => {
-    return args;
-};
-console.log(toArray(1, 2, 3, 4));
+// const toArray = (...args) => {
+//     return args;
+// };
+// console.log(toArray(1, 2, 3, 4));
 //now the array has 4 arguments. rest operator looks like the spread operator '...'
 //if you use the 3 dots in the argument list of a function, it will add to the already existing arguments, and is a rest operator.
+
+/************ Destructuring ***************/
+//go back up to the arrays and first object.
+
+/********************** Async code and promises */
 
 
