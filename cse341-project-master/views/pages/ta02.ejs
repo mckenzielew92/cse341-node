@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <% include ../includes/header.ejs %>
+</head>
+
+<body>
+  <% include ../includes/nav.ejs %>
+    <div class="jumbotron text-center">
+      <div class="container">
+        <h1>
+          <%= title %>
+        </h1>
+        <p>This is the placeholder for Team Activity 02</p>
+      </div>
+    </div>
+    <div class="container">
+      <form method="POST" action="/ta02/addUser">
+        <label for="username">Username: </label>
+        <input name="username" type="text">
+        <button type="submit">Send</button> 
+      </form>
+      <form method="POST" action="/ta02/removeUser">
+        <label for="username">Remove Username: </label>
+        <input name="username">
+
+      </form>
+      <% for (let i=0; i <names.length -1; i++) { %>
+        <br/> <%= i %>
+        <%= names[i] %>
+      <% } %>
+    </div>
+
+
+</body>
+
+</html>
