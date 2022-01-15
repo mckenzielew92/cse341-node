@@ -11,7 +11,7 @@ const products = [];
 //this is a different route than the one found on line 12 because it is using get and not post.
 //reached under /admin/add-product => GET
 router.get('/add-product', (req, res, next) => {
-    res.render('add-product', {pageTitle: 'Add Product', path: '/admin/add-product'});
+    res.render('add-product', {pageTitle: 'Add Product', path: '/admin/add-product', formsCSS: true, productCSS: true, activeAddProduct: true});
 });
 
 //app.get will only work for incoming GET requests. Can also use app.post for only POST requests.
