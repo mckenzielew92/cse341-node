@@ -3,11 +3,13 @@ const express = require('express');
 const rootDir = require('../utilities/path');
 const router = express.Router();
 
+const adminData = require('./admin');
+
+
 //__dirname will point to the folder you are currently in, if you want to point to a file in another folder, use ../
 router.get('/', (req, res, next) => {
-    res.sendFile(path.join(rootDir, 'views', 'shop.html')); //path join will automatically build the path with linex systems and windows. You will not need to use / in your path. just add each segment.
+    const products = adminData.products;
+    res.render('shop', {prods: products, pageTitle: 'Shop', path: '/'});
 });
-
-router.use
 
 module.exports = router;
