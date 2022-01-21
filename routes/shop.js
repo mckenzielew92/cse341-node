@@ -12,7 +12,11 @@ router.get('/', shopController.getIndex);
 
 router.get('/products', shopController.getProducts);
 
+router.get('/products/:productId', shopController.getProduct); //the colon signals to route that productsId could be anything like numbers: 29834
+
 router.get('/cart', shopController.getCart);
+
+router.get('/orders', shopController.getOrders);
 
 router.get('/checkout', shopController.getCheckout);
 
