@@ -6,15 +6,17 @@ const shopController = require('../controllers/shop');
 
 const router = express.Router();
 
-
-//__dirname will point to the folder you are currently in, if you want to point to a file in another folder, use ../
 router.get('/', shopController.getIndex);
 
 router.get('/products', shopController.getProducts);
 
-router.get('/products/:productId', shopController.getProduct); //the colon signals to route that productsId could be anything like numbers: 29834
+router.get('/products/:productId', shopController.getProduct);
 
 router.get('/cart', shopController.getCart);
+
+router.post('/cart', shopController.postCart);
+
+router.post('/cart-delete-item', shopController.postCartDeleteProduct);
 
 router.get('/orders', shopController.getOrders);
 
