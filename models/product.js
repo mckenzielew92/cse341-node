@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
+
 const Schema = mongoose.Schema;
+
 const productSchema = new Schema({
   title: {
     type: String,
@@ -19,7 +21,7 @@ const productSchema = new Schema({
   },
   userId: {
     type: Schema.Types.ObjectId,
-    ref: 'User', //refers to user model
+    ref: 'User',
     required: true
   }
 });
