@@ -1,0 +1,19 @@
+<!--  
+For the GET it returns a JSON list named posts containing title and content.
+For the POST, the frontend sends JSON format title and content.
+ -->
+###
+GET http://localhost:8080/feed/posts
+###
+//returns title(string of any length) and content(string of any length).
+POST http://localhost:8080/feed/post HTTP/1.1
+content-type: application/json
+
+{
+"title": "sample",
+"content": "Wed, 21 Oct 2015 18:27:50 GMT"
+}
+###
+//post title(string of any length) and content(string of any length).
+//returns message with either success or error. And post with id, title and content.
+
